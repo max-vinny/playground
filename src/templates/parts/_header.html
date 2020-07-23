@@ -1,1 +1,28 @@
-<header class="main-header"></header>
+<header class="main-header">
+    <nav>
+        <div>
+            <a href="index.html" class="main-header__logo">
+                {% include 'parts/svgo/logo-ofpery.svg' %}
+            </a>
+        </div>
+        {% 
+            set menulinks = [
+                {
+                    link: 'shedule.html',
+                    text: 'Shedule'
+                },
+                {
+                    link: 'prices.html',
+                    text: 'Prises'
+                }
+            ]    
+        %}
+        <ul>
+            {% for link in menulinks %}
+            <li>
+                <a href="{{ link.link }}">{{ link.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>
