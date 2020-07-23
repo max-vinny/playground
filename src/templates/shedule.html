@@ -6,5 +6,23 @@
 {% include 'parts/_header.html' %}
 
 <h1>{{ title }}</h1>
- 
+<ul>
+    {% set lists = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday&Sunday'] %}
+    {% for list in lists %}
+        <li>
+            {{ list }}
+            {% if loop.last %}
+            <ul>
+                <li>Weekend</li>
+            </ul>
+            {% else %}
+            <ul>
+                <li>Lessons</li>
+                <li>Consultations</li>
+            </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+
 {% include 'parts/_foot.html' %}
