@@ -131,6 +131,8 @@ a{
 
 /* General */
 
+/* Header */
+
 nav{
 	display: flex;
 	justify-content: center;
@@ -153,4 +155,43 @@ nav{
 		width: 100px;
 		height: 100px;
 	}
+}
+
+/* Main page */
+
+.services{
+	padding: 0;
+	margin: 0;
+	background-color: @secbgcolor;
+	color: @seccolor;
+	padding: @paddings[p10];
+	&__h{
+		margin: 0;
+		padding-bottom: @paddings[p30] ;
+	}
+	&__list{
+		padding: 0;
+		margin: 0;
+		padding-bottom: @paddings[p30];
+		color: @listcolor;
+	}
+	&__text{
+		font-size: 20px;
+		margin: 0;
+	}
+}
+.list{
+	li + li{
+		padding-top: @paddings[p10];
+	}
+}
+
+/* Shedule */
+
+/* Prices */
+
+/* Footer */
+
+.foot__rights{
+	text-align: center;
 }
