@@ -19,9 +19,13 @@
         %}
         <ul>
             {% for link in menulinks %}
-            <li>
-                <a href="{{ link.link }}">{{ link.text }}</a>
-            </li>
+            {% if link.text == title %}
+                <li class="active">
+            {% else %}
+                <li>
+            {% endif %}    
+                    <a href="{{ link.link }}">{{ link.text }}</a>
+                </li>
             {% endfor %}
         </ul>
     </nav>
