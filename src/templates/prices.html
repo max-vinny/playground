@@ -10,11 +10,25 @@
 <table>
     <thead>
         <tr>
-            <td></td>
+            {% set tabheads = ['Service', 'Period', 'Price'] %}
+            {% for tabhead in tabheads %}
+            <td>{{ tabhead }}</td>
+            {% endfor %}
         </tr>
     </thead>
     <tbody>
-        
+        {% set tabbodys = [
+            ['Courses', '60 days', '20000'],
+            ['Consultations', '1 hour', '500'],
+            ['Code review', '1 time', '500']
+            ] %}
+        {% for tabbodyrow in tabbodys %}
+            <tr>
+                {% for tabbodycol in tabbodyrow %}
+                    <td>{{ tabbodycol }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
     </tbody>
 </table>
  
