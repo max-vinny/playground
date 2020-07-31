@@ -21,5 +21,15 @@
         Everything is at the highest level
     </p>
 </section>
+<section class="wrapper">
+    <div class="row">
+        {% set columns = 9 %}
+        {% for column in range(0, columns) %}
+            <div class="block">
+                <button>Кнопка {{column}} </button>
+            </div>
+        {% endfor %}
+    </div>
+</section>
  
 {% include 'parts/_foot.html' %}

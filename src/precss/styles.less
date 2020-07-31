@@ -186,6 +186,20 @@ nav{
 	}
 }
 
+.block{
+	background-color: crimson;
+	height: 50px;
+	margin-bottom: @offset / 2;
+	margin-top: @offset / 2;
+	.size(4);
+	.col();
+	&:nth-child(even){
+		background-color: #000;
+		.size(8);
+	}
+}
+
+
 /* Shedule */
 
 /* Prices */
